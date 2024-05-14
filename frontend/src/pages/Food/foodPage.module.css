@@ -80,7 +80,7 @@
 }
 
 .price::before {
-  content: 'Price: ';
+  content: '';
   color: darkgrey;
 }
 

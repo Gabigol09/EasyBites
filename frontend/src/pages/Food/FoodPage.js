@@ -66,7 +66,7 @@ export default function FoodPage() {
 
             <div className={classes.cook_time}>
               <span>
-                Tempo para ficar pronto: <strong>{food.cookTime}</strong> minutoS
+                Tempo para ficar pronto: <strong>{food.cookTime}</strong> minutos
               </span>
             </div>
 
