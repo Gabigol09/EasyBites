@@ -15,7 +15,7 @@ export default function Button({
       <button
         style={{
           color,
-          backgroundColor,
+          backgroundColor:"#05b729",
           fontSize,
           width,
           height,
