@@ -11,7 +11,7 @@ export const sendEmailReceipt = function (order) {
             html: getReceipHtml(order),
         })
         .then(msg => console.log(msg)) //Sucesso
-        .catch(err => console.log(err)); //Falha
+        .catch(err => console.log(err));
 };
 
 const getReceipHtml = function (order) {
