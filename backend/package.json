@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mercadopago/sdk-react": "^0.0.19",
+    "backend": "file:",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.41.0",
     "cors": "^2.8.5",

@@ -14,5 +14,8 @@
   "license": "ISC",
   "engines": {
     "node": ">=18 <19"
+  },
+  "dependencies": {
+    "foodmine-react": "file:"
   }
 }
