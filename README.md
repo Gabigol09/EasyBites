@@ -1,165 +1,97 @@
-# Lessons:
+ Descrição do Projeto (README em Português)
 
-## 1. Demo And Installation
+ Sobre o Projeto
 
-- [x] Install [NodeJs](https://nodejs.org/en)
-- [x] Install [Visual Studio Code](https://code.visualstudio.com)
-- [x] Install [Git](https://git-scm.com)
+Este projeto é um site completo de E-Commerce desenvolvido utilizando Angular no frontend, Node.js no backend e MongoDB como banco de dados. O objetivo é criar uma aplicação de comércio eletrônico que ofereça uma experiência completa de compra, com funcionalidades como navegação por produtos, sistema de busca, carrinho de compras, autenticação de usuário (login/registro) e gerenciamento de pedidos.
 
-## 2. Creating React App
+Funcionalidades Principais
 
-- [x] Create React App
-- [x] Remove Unnecessary Codes
+### 1. **Início do Projeto**
+   - configuração das ferramentas de desenvolvimento necessárias.
 
-## 3. Adding Header
+### 2. **Criação da Aplicação Angular**
+   - Criação da pasta do projeto.
+   - Instalação do Angular CLI.
+   - Criação da aplicação frontend.
 
-- [x] Add Header.js
-- [x] Use Header in App.js
-- [x] Install react-router-dom in frontend
-- [x] Add header.module.css
-- [x] Use BrowserRouter inside index.js
-- [x] Update Header.js
-- [x] Update header.module.css
+### 3. **Adição de Componentes de Interface**
+   - Adicionar um cabeçalho (header) com HTML e CSS.
 
-## 4. Adding Thumbnails
+### 4. **Listagem de Produtos**
+   - Criar o modelo de dados para produtos (Foods).
+   - Adicionar dados de exemplo (`data.ts`) com produtos de teste.
+   - Adicionar imagens à pasta de assets.
+   - Criar o serviço para manipulação de dados de produtos.
+   - Criar componente de "Home" para exibir a lista de produtos com HTML, CSS e TS.
 
-- [x] Add HomePage component
-- [x] Add AppRoutes component
-- [x] Use AppRoutes in App.js
-- [x] Add data.js
-- [x] Add food Images
-- [x] Add foodService.js
-- [x] Update HomePage.js
-  - [x] Add Reducer
-  - [x] Load foods
-  - [x] Add Thumbnails.js
-    - [x] Add CSS File
-    - [x] Add Image
-    - [x] Add Title
-    - [x] Add Favorite Icon
-    - [x] Add StarRating.js
-      - [x] Add Star Images
-      - [x] Add CSS
-    - [x] Add Origins
-    - [x] Add Cook Time
-    - [x] Add Price.js
-    - [x] Update CSS File
+### 5. **Funcionalidade de Busca**
+   - Adicionar métodos de busca ao serviço de produtos.
+   - Criar rota de busca e exibir resultados na "Home".
+   - Criar componente de busca e integrá-lo à tela principal.
 
-## 5. Adding Search
+### 6. **Barra de Tags**
+   - Criar modelo para tags.
+   - Adicionar tags ao `data.ts`.
+   - Criar métodos no serviço para listar todas as tags e produtos por tag.
+   - Criar rota e componente para exibir tags e seus produtos.
 
-- [x] Add Search Route to AppRoutes.js
-- [x] Add Search function to foodService.js
-- [x] Use Search Inside HomePage.js
-- [x] Add Search Component
-  - [x] Add CSS
+### 7. **Página do Produto**
+   - Criar métodos no serviço para acessar informações de produtos específicos.
+   - Criar componente para a página de detalhes de cada produto.
 
-## 6.Adding Tags Bar
+### 8. **Página de Carrinho de Compras**
+   - Criar modelo para itens do carrinho e para o carrinho.
+   - Criar serviço de carrinho de compras.
+   - Adicionar botão "Adicionar ao Carrinho" na página de produtos.
+   - Criar componente para a página de carrinho, incluindo rotas, lógica, HTML e CSS.
 
-### Showing The Tags:
+### 9. **Página de Não Encontrado (404)**
+   - Criar componente para exibir mensagens de erro 404.
+   - Adicionar lógica para exibir o componente nas páginas principais: Home, Produto e Carrinho.
 
-- [x] Add sample_tags to data.js
-- [x] Add getAllTags function to foodService.js
-- [x] Add Tags Component
-  - [x] Add Css
-- [x] Use Tags Component in HomePage.js
+### 10. **Conexão com Backend**
+   - Criar pasta backend, configurar TypeScript e instalar pacotes necessários.
+   - Copiar dados do `data.ts` para o backend.
+   - Configurar servidor usando Express e CORS.
+   - Integrar APIs ao backend e conectar com o frontend.
 
-### Showing Foods By Tag
+### 11. **Página de Login**
+   - Criar componente de login e adicionar rota.
+   - Implementar autenticação de usuário utilizando APIs e JSON Web Token (JWT).
+   - Criar serviço de usuário e implementar funcionalidades como login, logout e armazenamento de dados no Local Storage.
 
-- [x] Add Tag route to AppRoutes.js
-- [x] Add getAllByTag function to foodService.js
-- [x] Use tag param in HomePage.js
+### 12. **Componentes Reutilizáveis para Login**
+   - Criar componentes personalizados para campos de entrada, validação e botões.
 
-## 7. Food Page
+### 13. **Conexão do Login com MongoDB Atlas**
+   - Separar APIs em roteadores.
+   - Configurar MongoDB Atlas e conectar a aplicação.
+   - Utilizar pacotes como Mongoose, dotenv e bcryptjs para conexão e segurança de dados.
 
-- [x] Create FoodPage Component
-- [x] Add route to AppRoutes.js
-- [x] Add getById function to foodService.js
-- [x] Update FoodPage Component
-  - [x] Load food
-  - [x] Create Template
-  - [x] Add Css
+### 14. **Página de Registro de Usuário**
+   - Adicionar funcionalidade para registrar novos usuários.
+   - Criar componente de registro e conectar ao serviço.
 
-## 8. Cart Page
+### 15. **Componente de Carregamento (Loading)**
+   - Adicionar componente e serviço para exibir status de carregamento durante solicitações assíncronas.
 
-- [x] Create Cart Page Component
-  - [x] Create css
-- [x] Add cart route to the Routes
-- [x] Create useCart Hook
-  - [x] Add CartProvider to index.js
-  - [x] Initialize cart with sample foods
-- [x] Update Cart Page Compnent
-  - [x] useCart hook
-  - [x] Add Title Component
-  - [x] Add JSX
-  - [x] Add CSS
-- [x] Update useCart Hook
-  - [x] Add to cart
-  - [x] Remove from cart
-  - [x] Change quantity
-  - [x] Saving To LocalStorage
-- [x] In Food Page useCart for Add to cart buttons
-- [x] In Header useCart for cart total count
+### 16. **Página de Checkout**
+   - Criar modelo de pedido e componente para a página de checkout.
+   - Adicionar mapa interativo para selecionar endereço de entrega.
+   - Criar métodos para salvar pedidos no backend e integrar segurança usando middleware de autenticação.
 
-## 9.Not Found!
+### 17. **Página de Pagamento**
+   - Criar componente para página de pagamento e integrá-la ao serviço de pedidos.
+   - Adicionar funcionalidade de leitura de pedidos do usuário atual.
 
-- [x] Create NotFound Component
-  - [x] Add CSS
-- [x] Add Not Found To:
-  - [x] Home Page
-  - [x] Food Page
-  - [x] Cart Page
-- [x] Fixing Search Issue
+### 18. **Integração com Paypal**
+   - Adicionar componente para pagamentos com Paypal.
+   - Configurar integração com API do Paypal para processar pagamentos.
 
-## 10. Connect To Backend
+### 21. **Atualização de Pacotes (Opcional)**
+   - Atualizar pacotes utilizando `npm-check-updates`.
+   - Garantir compatibilidade dos pacotes com versões corretas de TypeScript e demais dependências.
 
-- [x] Create backend folder
-- [x] Initializing NPM Project
-- [x] Copy data.ts to backend/src
-- [x] npm install express cors
-- [x] Create .gitignore
-- [x] Create server.js
-  - [x] Add & Config Express
-    - [x] Add & Config Cors
-  - [x] Add Food Router
-    - [x] Add jsconfig.json
-    - [x] Add Apis
-- [x] npm install nodemon
-  - [x] Add dev Script into the package.json
-  - [x] npm run dev
-- [x] Add axios package
-  - [x] axiosConfig.js file
-- [x] Connect food service to the Apis
+---
 
-## 11. Login Page
-
-### Backend
-
-- [x] Create User Router
-  - [x] npm install jsonwebtoken
-  - [x] Add Login Api
-    - [x] Add sample_users to data.js
-    - [x] Add httpStatus.js
-  - [x] Add generateTokenResponse function
-- [x] Add User Router To server.js
-
-### Frontend
-
-- [x] Create user service
-  - [x] Add getUser function
-  - [x] Add login function
-  - [x] Add logout function
-- [x] npm install react-toastify
-- [x] Create useAuth hook
-  - [x] Add user state
-  - [x] Add Login function
-  - [x] Add logout function
-- [x] Create LoginPage component
-  - [x] Add to AppRoutes.js
-  - [x] Create Custom Components
-    - [x] Input Container
-      - [x] CSS
-    - [x] Input
-      - [x] CSS
-    - [x] Button
-      - [x] CSS
-- [x] Add useAuth to the Header component
+Esse projeto oferece uma aplicação completa de E-Commerce, cobrindo desde a configuração inicial até a integração com banco de dados, autenticação de usuários, carrinho de compras, pagamentos com Paypal, e até o deploy final para produção.
