@@ -1,4 +1,3 @@
- Descrição do Projeto (README em Português)
 
  Sobre o Projeto
 
